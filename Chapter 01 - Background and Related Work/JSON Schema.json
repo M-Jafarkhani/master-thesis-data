@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Simulation Results",
+  "type": "object",
+  "properties": {
+    "parameters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/variable"
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/variable"
+      }
+    }
+  },
+  "required": ["parameters", "metrics"],
+  "additionalProperties": false,
+  "$defs": {
+    "variable": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the parameter or metric"
+        },
+        "value": {
+          "type": "number",
+          "description": "Numeric value of the parameter or metric"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit symbol (e.g., m, MPa)"
+        }
+      },
+      "required": ["name", "value", "unit"],
+      "additionalProperties": false
+    }
+  }
+}
