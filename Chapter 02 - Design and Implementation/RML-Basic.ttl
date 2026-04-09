@@ -1,0 +1,54 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix ex: <http://example.com/ns#> .
+
+<#ParameterMapping>
+  rml:logicalSource [
+    rml:source "Data.json" ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.parameters[*]"
+  ] ;
+
+  rr:subjectMap [
+    rr:template "http://example.com/parameter/{name}" ;
+    rr:class ex:Parameter
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ex:parameterName ;
+    rr:objectMap [ rml:reference "name" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ex:parameterValue ;
+    rr:objectMap [ rml:reference "value" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ex:parameterUnit ;
+    rr:objectMap [ rml:reference "unit" ]
+  ] .
+
+<#MetricMapping>
+  rml:logicalSource [
+    rml:source "Data.json" ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.metrics[*]"
+  ] ;
+
+  rr:subjectMap [
+    rr:template "http://example.com/metric/{name}" ;
+    rr:class ex:Metric
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ex:metricName ;
+    rr:objectMap [ rml:reference "name" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ex:metricValue ;
+    rr:objectMap [ rml:reference "value" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ex:metricUnit ;
+    rr:objectMap [ rml:reference "unit" ]
+  ] .

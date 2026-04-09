@@ -1,0 +1,255 @@
+{
+  "@context": {
+    "m4i": "http://w3id.org/nfdi4ing/metadata4ing#",
+    "schema": "https://schema.org/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://www.example.org/run/run_0.003125",
+      "@type": "m4i:Method",
+      "m4i:hasParameter": {
+        "@id": "https://www.example.org/run/run_0.003125/param/element_size"
+      },
+      "m4i:investigates": {
+        "@id": "https://www.example.org/run/run_0.003125/metric/max_von_mises_stress"
+      },
+      "rdfs:label": "run_0.003125"
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.003125/metric/max_von_mises_stress",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "max_von_mises_stress",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MegaPA"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "2.997833533485087E8"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.003125/param/element_size",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "element_size",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/M"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "3.125E-3"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.00625",
+      "@type": "m4i:Method",
+      "m4i:hasParameter": {
+        "@id": "https://www.example.org/run/run_0.00625/param/element_size"
+      },
+      "m4i:investigates": {
+        "@id": "https://www.example.org/run/run_0.00625/metric/max_von_mises_stress"
+      },
+      "rdfs:label": "run_0.00625"
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.00625/metric/max_von_mises_stress",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "max_von_mises_stress",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MegaPA"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "2.994754329303687E8"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.00625/param/element_size",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "element_size",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/M"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "6.25E-3"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.0125",
+      "@type": "m4i:Method",
+      "m4i:hasParameter": {
+        "@id": "https://www.example.org/run/run_0.0125/param/element_size"
+      },
+      "m4i:investigates": {
+        "@id": "https://www.example.org/run/run_0.0125/metric/max_von_mises_stress"
+      },
+      "rdfs:label": "run_0.0125"
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.0125/metric/max_von_mises_stress",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "max_von_mises_stress",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MegaPA"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "3.001296187137937E8"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.0125/param/element_size",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "element_size",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/M"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "1.25E-2"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.025",
+      "@type": "m4i:Method",
+      "m4i:hasParameter": {
+        "@id": "https://www.example.org/run/run_0.025/param/element_size"
+      },
+      "m4i:investigates": {
+        "@id": "https://www.example.org/run/run_0.025/metric/max_von_mises_stress"
+      },
+      "rdfs:label": "run_0.025"
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.025/metric/max_von_mises_stress",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "max_von_mises_stress",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MegaPA"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "2.997915075586333E8"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.025/param/element_size",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "element_size",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/M"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "2.5E-2"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.05",
+      "@type": "m4i:Method",
+      "m4i:hasParameter": {
+        "@id": "https://www.example.org/run/run_0.05/param/element_size"
+      },
+      "m4i:investigates": {
+        "@id": "https://www.example.org/run/run_0.05/metric/max_von_mises_stress"
+      },
+      "rdfs:label": "run_0.05"
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.05/metric/max_von_mises_stress",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "max_von_mises_stress",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MegaPA"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "2.960114787488503E8"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.05/param/element_size",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "element_size",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/M"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "5.0E-2"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.1",
+      "@type": "m4i:Method",
+      "m4i:hasParameter": {
+        "@id": "https://www.example.org/run/run_0.1/param/element_size"
+      },
+      "m4i:investigates": {
+        "@id": "https://www.example.org/run/run_0.1/metric/max_von_mises_stress"
+      },
+      "rdfs:label": "run_0.1"
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.1/metric/max_von_mises_stress",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "max_von_mises_stress",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MegaPA"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "2.731909343950996E8"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.1/param/element_size",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "element_size",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/M"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "1.0E-1"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.5",
+      "@type": "m4i:Method",
+      "m4i:hasParameter": {
+        "@id": "https://www.example.org/run/run_0.5/param/element_size"
+      },
+      "m4i:investigates": {
+        "@id": "https://www.example.org/run/run_0.5/metric/max_von_mises_stress"
+      },
+      "rdfs:label": "run_0.5"
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.5/metric/max_von_mises_stress",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "max_von_mises_stress",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MegaPA"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "3.017513059498788E8"
+      }
+    },
+    {
+      "@id": "https://www.example.org/run/run_0.5/param/element_size",
+      "@type": "schema:PropertyValue",
+      "rdfs:label": "element_size",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/M"
+      },
+      "schema:value": {
+        "@type": "xsd:double",
+        "@value": "5.0E-1"
+      }
+    }
+  ]
+}

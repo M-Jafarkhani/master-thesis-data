@@ -4,55 +4,71 @@
 @prefix m4i: <http://w3id.org/nfdi4ing/metadata4ing#> .
 @prefix schema: <https://schema.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<#RunFenicsSimulation>
+<#RunMapping>
   rml:logicalSource [
     rml:source "Data.json" ;
     rml:referenceFormulation ql:JSONPath ;
-    rml:iterator "$"
+    rml:iterator "$[*]"
   ] ;
-  
+
   rr:subjectMap [
-    rr:template "https://www.example.org/run_fenics_simulation" ;
+    rr:template "https://www.example.org/run/{run_id}" ;
     rr:class m4i:Method
   ] ;
-  
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "run_id" ]
+  ] ;
+
+  # Link to parameters — IRI constructed here, no join needed
   rr:predicateObjectMap [
     rr:predicate m4i:hasParameter ;
-    rr:objectMap [ rr:parentTriplesMap <#ParameterMapping> ]
+    rr:objectMap [
+      rr:template "https://www.example.org/run/{run_id}/param/{parameters[0].name}"
+    ]
   ] ;
-  
+
+  # Link to metrics — same pattern
   rr:predicateObjectMap [
     rr:predicate m4i:investigates ;
-    rr:objectMap [ rr:parentTriplesMap <#MetricMapping> ]
+    rr:objectMap [
+      rr:template "https://www.example.org/run/{run_id}/metric/{metrics[0].name}"
+    ]
   ] .
 
 <#ParameterMapping>
   rml:logicalSource [
     rml:source "Data.json" ;
     rml:referenceFormulation ql:JSONPath ;
-    rml:iterator "$.parameters[*]"
+    rml:iterator "$[*]"                          # iterate runs, not parameters
   ] ;
-  
+
   rr:subjectMap [
-    rr:template "https://www.example.org/variable_{name}" ;
+    # IRI matches exactly what <#RunMapping> links to above
+    rr:template "https://www.example.org/run/{run_id}/param/{parameters[0].name}" ;
     rr:class schema:PropertyValue
   ] ;
-  
+
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rml:reference "name" ]
+    rr:objectMap [ rml:reference "parameters[0].name" ]
   ] ;
-  
+
   rr:predicateObjectMap [
     rr:predicate schema:value ;
-    rr:objectMap [ rml:reference "value" ]
+    rr:objectMap [
+      rml:reference "parameters[0].value" ;
+      rr:datatype xsd:double
+    ]
   ] ;
-  
+
   rr:predicateObjectMap [
     rr:predicate schema:unitCode ;
     rr:objectMap [
-      rr:template "http://qudt.org/vocab/unit/{unit}" ;
+      rr:template "http://qudt.org/vocab/unit/{parameters[0].unit}" ;
       rr:termType rr:IRI
     ]
   ] .
@@ -61,28 +77,31 @@
   rml:logicalSource [
     rml:source "Data.json" ;
     rml:referenceFormulation ql:JSONPath ;
-    rml:iterator "$.metrics[*]"
+    rml:iterator "$[*]"                          # iterate runs, not metrics
   ] ;
-  
+
   rr:subjectMap [
-    rr:template "https://www.example.org/variable_{name}" ;
+    rr:template "https://www.example.org/run/{run_id}/metric/{metrics[0].name}" ;
     rr:class schema:PropertyValue
   ] ;
-  
+
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rml:reference "name" ]
+    rr:objectMap [ rml:reference "metrics[0].name" ]
   ] ;
-  
+
   rr:predicateObjectMap [
     rr:predicate schema:value ;
-    rr:objectMap [ rml:reference "value" ]
+    rr:objectMap [
+      rml:reference "metrics[0].value" ;
+      rr:datatype xsd:double
+    ]
   ] ;
-  
+
   rr:predicateObjectMap [
     rr:predicate schema:unitCode ;
     rr:objectMap [
-      rr:template "http://qudt.org/vocab/unit/{unit}" ;
+      rr:template "http://qudt.org/vocab/unit/{metrics[0].unit}" ;
       rr:termType rr:IRI
     ]
   ] .

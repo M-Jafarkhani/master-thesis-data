@@ -1,0 +1,21 @@
+Create one main resource local:run_fenics_simulation of type m4i:Method.
+This node links to parameter nodes using m4i:hasParameter and to metric nodes using m4i:investigates.
+
+Iterate over the arrays parameters[*] and metrics[*] separately to create parameter and metric nodes.
+
+For each entry in these arrays:
+
+Create a resource with IRI local:variable_{name} using the "name" field.
+Set the type to schema:PropertyValue.
+Set rdfs:label to the "name" value.
+Set schema:value to the "value".
+Map the "unit" field to schema:unitCode as an IRI from the QUDT unit vocabulary using the template http://qudt.org/vocab/unit/{unit}.
+
+Connect the method node to parameter nodes using m4i:hasParameter, and to metric nodes using m4i:investigates.
+
+Use these prefixes in the mapping:
+m4i: http://w3id.org/nfdi4ing/metadata4ing#
+schema: https://schema.org/
+rdfs: http://www.w3.org/2000/01/rdf-schema#
+unit: http://qudt.org/vocab/unit/
+local: https://www.example.org/

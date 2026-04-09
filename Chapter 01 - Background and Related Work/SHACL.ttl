@@ -1,0 +1,35 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix local: <https://www.example.org/> .
+
+local:PropertyValueShape
+    a sh:NodeShape ;
+    sh:targetClass schema:PropertyValue ;
+
+    # The variable name label
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # The numeric value of the parameter or metric
+    sh:property [
+        sh:path schema:value ;
+        sh:datatype xsd:double ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # The unit, as a named QUDT IRI
+    sh:property [
+        sh:path schema:unitCode ;
+        sh:nodeKind sh:IRI ;
+        sh:class qudt:Unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .

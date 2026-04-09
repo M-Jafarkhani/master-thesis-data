@@ -1,41 +1,57 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Simulation Results",
+  "title": "Simulation Parameters and Results Dataset",
   "type": "object",
   "properties": {
     "parameters": {
+      "title": "Simulation Input Parameters",
+      "description": "List of input variables.",
       "type": "array",
       "items": {
         "$ref": "#/$defs/variable"
       }
     },
     "metrics": {
+      "title": "Simulation Metrics",
+      "description": "List of measured or computed results produced by the simulation.",
       "type": "array",
       "items": {
         "$ref": "#/$defs/variable"
       }
     }
   },
-  "required": ["parameters", "metrics"],
+  "required": [
+    "parameters",
+    "metrics"
+  ],
   "additionalProperties": false,
   "$defs": {
     "variable": {
+      "title": "Quantitative Variable",
+      "description": "Represents a numeric quantity with a name and unit, used for both parameters and metrics.",
       "type": "object",
       "properties": {
         "name": {
+          "title": "Variable Name",
           "type": "string",
-          "description": "Name of the parameter or metric"
+          "description": "Identifier of the parameter or metric."
         },
         "value": {
+          "title": "Numeric Value",
           "type": "number",
-          "description": "Numeric value of the parameter or metric"
+          "description": "Measured or assigned numeric value."
         },
         "unit": {
+          "title": "Measurement Unit",
           "type": "string",
-          "description": "Unit symbol (e.g., m, MPa)"
+          "description": "Unit symbol following a standard QUDT instance."
         }
       },
-      "required": ["name", "value", "unit"],
+      "required": [
+        "name",
+        "value",
+        "unit"
+      ],
       "additionalProperties": false
     }
   }

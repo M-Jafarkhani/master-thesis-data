@@ -1,0 +1,121 @@
+[
+  {
+    "run_id": "run_0.025",
+    "parameters": [
+      {
+        "name": "element_size",
+        "value": 0.025,
+        "unit": "M"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "max_von_mises_stress",
+        "value": 299791507.5586333,
+        "unit": "MegaPA"
+      }
+    ]
+  },
+  {
+    "run_id": "run_0.0125",
+    "parameters": [
+      {
+        "name": "element_size",
+        "value": 0.0125,
+        "unit": "M"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "max_von_mises_stress",
+        "value": 300129618.7137937,
+        "unit": "MegaPA"
+      }
+    ]
+  },
+  {
+    "run_id": "run_0.05",
+    "parameters": [
+      {
+        "name": "element_size",
+        "value": 0.05,
+        "unit": "M"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "max_von_mises_stress",
+        "value": 296011478.74885035,
+        "unit": "MegaPA"
+      }
+    ]
+  },
+  {
+    "run_id": "run_0.1",
+    "parameters": [
+      {
+        "name": "element_size",
+        "value": 0.1,
+        "unit": "M"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "max_von_mises_stress",
+        "value": 273190934.3950996,
+        "unit": "MegaPA"
+      }
+    ]
+  },
+  {
+    "run_id": "run_0.00625",
+    "parameters": [
+      {
+        "name": "element_size",
+        "value": 0.00625,
+        "unit": "M"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "max_von_mises_stress",
+        "value": 299475432.93036866,
+        "unit": "MegaPA"
+      }
+    ]
+  },
+  {
+    "run_id": "run_0.5",
+    "parameters": [
+      {
+        "name": "element_size",
+        "value": 0.5,
+        "unit": "M"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "max_von_mises_stress",
+        "value": 301751305.94987875,
+        "unit": "MegaPA"
+      }
+    ]
+  },
+  {
+    "run_id": "run_0.003125",
+    "parameters": [
+      {
+        "name": "element_size",
+        "value": 0.003125,
+        "unit": "M"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "max_von_mises_stress",
+        "value": 299783353.3485087,
+        "unit": "MegaPA"
+      }
+    ]
+  }
+]
