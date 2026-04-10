@@ -3,6 +3,7 @@
     "m4i": "http://w3id.org/nfdi4ing/metadata4ing#",
     "schema": "https://schema.org/",
     "unit": "http://qudt.org/vocab/unit/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "local": "https://www.example.org/"
   },
   "@graph": [
