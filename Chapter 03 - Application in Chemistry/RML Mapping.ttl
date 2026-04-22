@@ -7,6 +7,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix ex: <https://www.example.org/> .
 
 ##################################################
 # SOURCES
@@ -45,8 +46,8 @@
     rml:logicalSource <#SynthesisSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/synthesis/{Hardware.Component[0]._id}" ;
-        rr:class chmo:0000568
+        rr:template "https://www.example.org/synthesis/{Hardware.Component[0]._id}" ;
+        rr:class obo:OBI_0000968
     ] ;
 
     rr:predicateObjectMap [
@@ -77,7 +78,7 @@
     rml:logicalSource <#ReagentSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/reagent/{_id}" ;
+        rr:template "https://www.example.org/reagent/{_id}" ;
         rr:class obo:CHEBI_24431
     ] ;
 
@@ -99,7 +100,7 @@
     rml:logicalSource <#PrepStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/step/prep/{_vessel}-{_order}" ;
+        rr:template "https://www.example.org/step/prep/{_vessel}-{_order}" ;
         rr:class obo:OBI_0000070
     ] ;
 
@@ -116,7 +117,7 @@
     rr:predicateObjectMap [
         rr:predicate obo:OBI_0001937 ;
         rr:objectMap [
-            rr:template "http://example.org/quantity/prep/{_vessel}-{_order}/amount"
+            rr:template "https://www.example.org/quantity/prep/{_vessel}-{_order}/amount"
         ]
     ] .
 
@@ -124,7 +125,7 @@
     rml:logicalSource <#PrepStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/quantity/prep/{_vessel}-{_order}/amount" ;
+        rr:template "https://www.example.org/quantity/prep/{_vessel}-{_order}/amount" ;
         rr:class schema:PropertyValue
     ] ;
 
@@ -156,7 +157,7 @@
     rml:logicalSource <#ReactionStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/step/reaction/{_vessel}-{_order}" ;
+        rr:template "https://www.example.org/step/reaction/{_vessel}-{_order}" ;
         rr:class obo:OBI_0000070
     ] ;
 
@@ -173,14 +174,14 @@
     rr:predicateObjectMap [
         rr:predicate obo:OBI_0001937 ;
         rr:objectMap [
-            rr:template "http://example.org/quantity/reaction/{_vessel}-{_order}/temperature"
+            rr:template "https://www.example.org/quantity/reaction/{_vessel}-{_order}/temperature"
         ]
     ] ;
 
     rr:predicateObjectMap [
         rr:predicate obo:OBI_0001937 ;
         rr:objectMap [
-            rr:template "http://example.org/quantity/reaction/{_vessel}-{_order}/time"
+            rr:template "https://www.example.org/quantity/reaction/{_vessel}-{_order}/time"
         ]
     ] .
 
@@ -188,7 +189,7 @@
     rml:logicalSource <#ReactionStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/quantity/reaction/{_vessel}-{_order}/temperature" ;
+        rr:template "https://www.example.org/quantity/reaction/{_vessel}-{_order}/temperature" ;
         rr:class schema:PropertyValue
     ] ;
 
@@ -216,7 +217,7 @@
     rml:logicalSource <#ReactionStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/quantity/reaction/{_vessel}-{_order}/time" ;
+        rr:template "https://www.example.org/quantity/reaction/{_vessel}-{_order}/time" ;
         rr:class schema:PropertyValue
     ] ;
 
@@ -248,7 +249,7 @@
     rml:logicalSource <#WorkupStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/step/workup/{_vessel}-{_order}" ;
+        rr:template "https://www.example.org/step/workup/{_vessel}-{_order}" ;
         rr:class obo:OBI_0000070
     ] ;
 
@@ -265,21 +266,21 @@
     rr:predicateObjectMap [
         rr:predicate obo:OBI_0001937 ;
         rr:objectMap [
-            rr:template "http://example.org/quantity/workup/{_vessel}-{_order}/temperature"
+            rr:template "https://www.example.org/quantity/workup/{_vessel}-{_order}/temperature"
         ]
     ] ;
 
     rr:predicateObjectMap [
         rr:predicate obo:OBI_0001937 ;
         rr:objectMap [
-            rr:template "http://example.org/quantity/workup/{_vessel}-{_order}/time"
+            rr:template "https://www.example.org/quantity/workup/{_vessel}-{_order}/time"
         ]
     ] ;
 
     rr:predicateObjectMap [
         rr:predicate obo:OBI_0001937 ;
         rr:objectMap [
-            rr:template "http://example.org/quantity/workup/{_vessel}-{_order}/pressure"
+            rr:template "https://www.example.org/quantity/workup/{_vessel}-{_order}/pressure"
         ]
     ] .
 
@@ -287,7 +288,7 @@
     rml:logicalSource <#WorkupStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/quantity/workup/{_vessel}-{_order}/temperature" ;
+        rr:template "https://www.example.org/quantity/workup/{_vessel}-{_order}/temperature" ;
         rr:class schema:PropertyValue
     ] ;
 
@@ -315,7 +316,7 @@
     rml:logicalSource <#WorkupStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/quantity/workup/{_vessel}-{_order}/time" ;
+        rr:template "https://www.example.org/quantity/workup/{_vessel}-{_order}/time" ;
         rr:class schema:PropertyValue
     ] ;
 
@@ -343,7 +344,7 @@
     rml:logicalSource <#WorkupStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/quantity/workup/{_vessel}-{_order}/pressure" ;
+        rr:template "https://www.example.org/quantity/workup/{_vessel}-{_order}/pressure" ;
         rr:class schema:PropertyValue
     ] ;
 
@@ -375,13 +376,13 @@
     rml:logicalSource <#PrepStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/synthesis/{_vessel}"
+        rr:template "https://www.example.org/synthesis/{_vessel}"
     ] ;
 
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000051 ;
         rr:objectMap [
-            rr:template "http://example.org/step/prep/{_vessel}-{_order}"
+            rr:template "https://www.example.org/step/prep/{_vessel}-{_order}"
         ]
     ] .
 
@@ -389,13 +390,13 @@
     rml:logicalSource <#ReactionStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/synthesis/{_vessel}"
+        rr:template "https://www.example.org/synthesis/{_vessel}"
     ] ;
 
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000051 ;
         rr:objectMap [
-            rr:template "http://example.org/step/reaction/{_vessel}-{_order}"
+            rr:template "https://www.example.org/step/reaction/{_vessel}-{_order}"
         ]
     ] .
 
@@ -403,13 +404,13 @@
     rml:logicalSource <#WorkupStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/synthesis/{_vessel}"
+        rr:template "https://www.example.org/synthesis/{_vessel}"
     ] ;
 
     rr:predicateObjectMap [
         rr:predicate obo:BFO_0000051 ;
         rr:objectMap [
-            rr:template "http://example.org/step/workup/{_vessel}-{_order}"
+            rr:template "https://www.example.org/step/workup/{_vessel}-{_order}"
         ]
     ] .
 
@@ -417,7 +418,7 @@
     rml:logicalSource <#PrepStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/step/prep/{_vessel}-{_order}"
+        rr:template "https://www.example.org/step/prep/{_vessel}-{_order}"
     ] ;
 
     rr:predicateObjectMap [
@@ -435,7 +436,7 @@
     rml:logicalSource <#WorkupStepSource> ;
 
     rr:subjectMap [
-        rr:template "http://example.org/step/workup/{_vessel}-{_order}"
+        rr:template "https://www.example.org/step/workup/{_vessel}-{_order}"
     ] ;
 
     rr:predicateObjectMap [

@@ -1,11 +1,12 @@
 {
   "@context": {
-    "ex": "http://example.org/",
     "chmo": "http://purl.obolibrary.org/obo/CHMO_",
     "obo": "http://purl.obolibrary.org/obo/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "https://schema.org/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "unit": "http://qudt.org/vocab/unit/",
+    "ex": "https://www.example.org/"
   },
   "@graph": [
     {
@@ -13,7 +14,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "amount",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/MilliMOL"
+        "@id": "unit:MilliMOL"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -25,7 +26,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "amount",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/MilliMOL"
+        "@id": "unit:MilliMOL"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -37,7 +38,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "amount",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/MilliL"
+        "@id": "unit:MilliL"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -49,7 +50,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "amount",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/MilliMOL"
+        "@id": "unit:MilliMOL"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -61,7 +62,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "amount",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/MilliMOL"
+        "@id": "unit:MilliMOL"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -73,7 +74,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "amount",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/MilliL"
+        "@id": "unit:MilliL"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -90,7 +91,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "time",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/MIN"
+        "@id": "unit:MIN"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -102,7 +103,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "temperature",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/DEG_C"
+        "@id": "unit:DEG_C"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -114,7 +115,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "time",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/DAY"
+        "@id": "unit:DAY"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -131,7 +132,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "time",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/MIN"
+        "@id": "unit:MIN"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -143,7 +144,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "temperature",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/DEG_C"
+        "@id": "unit:DEG_C"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -155,7 +156,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "time",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/DAY"
+        "@id": "unit:DAY"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -182,7 +183,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "pressure",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/PA"
+        "@id": "unit:PA"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -194,7 +195,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "temperature",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/DEG_C"
+        "@id": "unit:DEG_C"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -206,7 +207,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "time",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/DAY"
+        "@id": "unit:DAY"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -233,7 +234,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "pressure",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/PA"
+        "@id": "unit:PA"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -245,7 +246,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "temperature",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/DEG_C"
+        "@id": "unit:DEG_C"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -257,7 +258,7 @@
       "@type": "schema:PropertyValue",
       "rdfs:label": "time",
       "schema:unitCode": {
-        "@id": "http://qudt.org/vocab/unit/DAY"
+        "@id": "unit:DAY"
       },
       "schema:value": {
         "@type": "xsd:double",
@@ -498,7 +499,7 @@
     },
     {
       "@id": "ex:synthesis/S-1",
-      "@type": "obo:CHMO_0000568",
+      "@type": "obo:OBI_0000968",
       "obo:BFO_0000051": [
         {
           "@id": "ex:step/prep/S-1-0"
@@ -529,7 +530,7 @@
     },
     {
       "@id": "ex:synthesis/S-2",
-      "@type": "obo:CHMO_0000568",
+      "@type": "obo:OBI_0000968",
       "obo:BFO_0000051": [
         {
           "@id": "ex:step/prep/S-2-0"
